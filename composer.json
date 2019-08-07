@@ -1,0 +1,23 @@
+{
+    "name": "tiketux/menu",
+    "description": "API Menu",
+    "authors": [
+        {
+            "name": "Muhammad Anis",
+            "email": "m.anis@3trust.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tiketux\\Menu\\": "src/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tiketux\\Menu\\MenuServiceProvider"
+            ]
+        }
+    }
+}
