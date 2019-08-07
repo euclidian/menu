@@ -17,7 +17,8 @@ class MenuApi extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth:api',"admin"]);
+        $this->middleware('auth:api');
+        $this->middleware("admin")->except(['list']);
     }
 
     public function list()
@@ -70,7 +71,7 @@ class MenuApi extends Controller
             "icon" => "required",
             "is_admin" => "required"
         ]);
-        
+
         if ($request->input("PageId") == null) {
             Menu::create($request->input());
         } else {
